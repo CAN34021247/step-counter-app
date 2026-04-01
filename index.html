@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Step Counter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Step Counter</h1>
+    <p>Track your daily steps, calories burned, and distance walked.</p>
+    <button id="modeBtn">🌙 Dark Mode</button>
+  </div>
+
+  <!-- GOAL -->
+  <div class="card">
+    <h2>Daily Step Goal</h2>
+
+    <div class="goal-box">
+      <input type="number" id="goalInput" value="10000">
+      <button onclick="setGoal()">Set Goal</button>
+    </div>
+
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <p id="goalText">0 / 10000 Steps</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="card">
+    <h2>Today's Stats</h2>
+    <p>🔥 Calories Burned: <span id="cal">0.00</span></p>
+    <p>📍 Distance Walked: <span id="dist">0.00</span> km</p>
+    <p>⏱ Time Active: <span id="time">0</span> minutes</p>
+  </div>
+
+  <!-- STEP COUNTER -->
+  <div class="card">
+    <h2>Step Counter</h2>
+    <button class="start" onclick="addStep()">▶ Start</button>
+    <p>Steps: <span id="steps">0</span></p>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="card">
+    <h2>User Profile</h2>
+
+    <label>Name:</label>
+    <input type="text" id="name">
+
+    <label>Weight (kg):</label>
+    <input type="number" id="weight">
+
+    <button onclick="updateProfile()">Update Profile</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 Step Counter App. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
